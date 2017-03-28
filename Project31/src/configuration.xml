@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  	<typeAliases>
+  		<typeAlias type="model.F_board" alias="f_board"/>
+  		<typeAlias type="model.File" alias="file"/>
+  		<typeAlias type="model.Member_record" alias="member_record"/>
+  		<typeAlias type="model.Member" alias="member"/>
+  		<typeAlias type="model.N_board" alias="n_board"/>
+  		<typeAlias type="model.R_board" alias="r_board"/>
+  		<typeAlias type="model.Team_f_board" alias="team_f_board"/>
+  		<typeAlias type="model.Team_intro" alias="team_intro"/>
+  		<typeAlias type="model.Team_member" alias="team_member"/>
+  		<typeAlias type="model.Team_n_board" alias="team_n_board"/>
+  		<typeAlias type="model.Team_record" alias="team_record"/>
+  		<typeAlias type="model.Team" alias="team"/>
+  		<typeAlias type="model.Total_match" alias="total_match"/>
+  	</typeAliases>
+  	
+  	<environments default="mysql">
+  		<environment id="mysql">
+  			<transactionManager type="jdbc"></transactionManager>
+  			<dataSource type="unpooled">
+  				<property name="username" value="root"/>
+  				<property name="password" value="mysql"/>
+  				<property name="driver" value="com.mysql.jdbc.Driver"/>
+  				<property name="url" value="jdbc:mysql://localhost/project31_db"/>
+  			</dataSource>
+  		</environment>
+  	</environments>
+  	
+  	<mappers>
+  		<mapper resource="mapper/memberMapper.xml"/>
+  	</mappers>
+  </configuration>
