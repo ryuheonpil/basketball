@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="service.TeamFreeboardService">
+
+	<resultMap type="Team_f_board" id="Team_f_boardMap">
+		<result column="t_no" property="t_no"/>
+		<result column="b_no" property="b_no"/>
+		<result column="title" property="title"/>
+		<result column="content" property="content"/>
+		<result column="m_no" property="m_no"/>
+		<result column="date" property="date"/>
+		<result column="count" property="count"/>
+		<result column="file_no" property="file_no"/>
+	</resultMap>
+
+	<select id="t_freeSelectAll" resultMap="Team_f_boardMap">
+
+	</select>
+	
+	<select id="t_freeSearch" parameterType="" resultMap="">
+	
+	</select>
+	
+	<insert id="t_freeWrite" parameterType="Team_f_board">
+		
+	</insert>
+	
+	<update id="t_freeUpdate">
+	
+	</update>
+	
+	<select id="t_freeSelectOne" parameterType="int" resultType="">
+	
+	</select>
+	
+	<delete id="t_freeDelete" parameterType="int">
+	
+	</delete>
+	
+	
+</mapper>
