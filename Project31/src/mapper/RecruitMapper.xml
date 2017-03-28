@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="impl.RecruitServiceImpl">
+	<resultMap type="r_board" id="r_boardMap">
+		<id column="b_no" property="b_no"/>
+		<result column="title" property="title"/>
+		<result column="content" property="content"/>
+		<result column="m_no" property="m_no"/>
+		<result column="date" property="date"/>
+		<result column="count" property="count"/>
+		<result column="file_no" property="file_no"/>
+		<result column="local" property="local"/>
+	</resultMap>
+	<insert id="m_recruitWrite" parameterType="r_board">
+				
+	</insert>
+	<update id="m_recruitUpdate" parameterType="r_board">
+		
+	</update>
+	<delete id="m_recruitDelete" parameterType="int">
+		
+	</delete>
+	<select id="m_recruitSearch" resultType="r_board" parameterType="int">
+		
+	</select>
+	<select id="m_recruitSelectAll" resultType="r_board">
+		
+	</select>
+</mapper>

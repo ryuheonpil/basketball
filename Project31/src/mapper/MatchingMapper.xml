@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="impl.MatchServiceImpl">
+	<resultMap type="total_match" id="total_matchMap">
+		<id column="no" property="no"/>
+		<result column="d_day" property="d_day"/>
+		<result column="location" property="location"/>
+		<result column="t_no_home" property="t_no_home"/>
+		<result column="t_no_away" property="t_no_away"/>
+		<result column="result" property="result"/>
+		<result column="home_score" property="home_score"/>
+		<result column="away_score" property="away_score"/>
+		<result column="date" property="date"/>
+	</resultMap>
+	<insert id="m_matchingAdd" parameterType="total_match">
+				
+	</insert>
+	<insert id="m_matchingAdminAdd" parameterType="total_match">
+				
+	</insert>
+	<update id="m_matchingUpdate" parameterType="total_match">
+		
+	</update>
+	<update id="m_matchingAdminUpdate" parameterType="total_match">
+		
+	</update>
+	<delete id="m_matchingAdminDelete" parameterType="int">
+		
+	</delete>
+	<select id="m_matchingSearch" resultType="total_match" parameterType="int">
+		
+	</select>
+	<select id="m_matchingSelectAll" resultType="total_match">
+		
+	</select>
+	<select id="m_matchingToday" resultType="total_match" parameterType="date">
+		
+	</select>
+</mapper>
