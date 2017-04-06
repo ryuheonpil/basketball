@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="username" value="root" />
+		<property name="password" value="mysql" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost/project31_db" />
+	</bean>
+
+	<bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="typeAliasesPackage" value="model"></property>
+		<property name="mapperLocations" value="classpath*:mapper/*.xml"></property>
+	</bean>
+
+	<bean id="session" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="factory"></constructor-arg>
+	</bean>
+
+	<!-- mapper 겟매퍼쓸건지 안쓸건지 추후 결정 -->
+	<!-- <bean id="mapper" class="org.mybatis.spring.mapper.MapperFactoryBean"> -->
+	<!-- <property name="mapperInterface" value="" ></property> -->
+	<!-- </bean> -->
+
+
+	<!-- 어노테이션쓸거라 필요없어졌음 -->
+	<!-- <bean class="servlet.M_mainServlet" name="/m_main.do"></bean> -->
+	<!-- <bean class="servlet.M_joinServlet" name="/m_join.do"></bean> -->
+	<!-- <bean class="servlet.M_idpw_serchServlet" name="/m_idpw_serch.do"></bean> -->
+	<!-- <bean class="servlet.M_login_mypageServlet" name="/m_login_mypage.do"></bean> -->
+	<!-- <bean class="servlet.M_withdrawServlet" name="/m_withdraw.do"></bean> -->
+	<!-- <bean class="servlet.M_team_registerServlet" name="/m_team_register.do"></bean> -->
+	<!-- <bean class="servlet.M_team_inquiryServlet" name="/m_team_inquiry.do"></bean> -->
+	<!-- <bean class="servlet.M_recruitServlet" name="/m_recruit.do"></bean> -->
+	<!-- <bean class="servlet.M_recruit_wirteServlet" name="/m_recruit_wirte.do"></bean> -->
+	<!-- <bean class="servlet.M_recruit_detailServlet" name="/m_recruit_detail.do"></bean> -->
+	<!-- <bean class="servlet.M_recruit_modifyServlet" name="/m_recruit_modify.do"></bean> -->
+	<!-- <bean class="servlet.M_machingServlet" name="/m_maching.do"></bean> -->
+	<!-- <bean class="servlet.M_maching_registerServlet" name="/m_maching_register.do"></bean> -->
+	<!-- <bean class="servlet.M_maching_modifyServlet" name="/m_maching_modify.do"></bean> -->
+	<!-- <bean class="servlet.M_matching_todayServlet" name="m_matching_today/.do"></bean> -->
+	<!-- <bean class="servlet.M_community_noticeServlet" name="/m_community_notice.do"></bean> -->
+	<!-- <bean class="servlet.M_community_notice_writeServlet" name="/m_community_notice_write.do"></bean> -->
+	<!-- <bean class="servlet.M_community_notice_detailServlet" name="/m_community_notice_detail.do"></bean> -->
+	<!-- <bean class="servlet.M_community_notice_modifyServlet" name="/m_community_notice_modify.do"></bean> -->
+	<!-- <bean class="servlet.M_community_freeServlet" name="/m_community_free.do"></bean> -->
+	<!-- <bean class="servlet.M_community_free_writeServlet" name="/m_community_free_write.do"></bean> -->
+	<!-- <bean class="servlet.M_community_free_detailServlet" name="/m_community_free_detail.do"></bean> -->
+	<!-- <bean class="servlet.M_community_free_modifyServlet" name="/m_community_free_modify.do"></bean> -->
+	<!-- <bean class="servlet.M_team_recordServlet" name="/m_team_record.do"></bean> -->
+	<!-- <bean class="servlet.M_member_recordServlet" name="/m_member_record.do"></bean> -->
+	<!-- <bean class="servlet.T_mainServlet" name="/t_main.do"></bean> -->
+	<!-- <bean class="servlet.T_joinServlet" name="/t_join.do"></bean> -->
+	<!-- <bean class="servlet.T_withdrawServlet" name="/t_withdraw.do"></bean> -->
+	<!-- <bean class="servlet.T_infoServlet" name="/t_info.do"></bean> -->
+	<!-- <bean class="servlet.T_info_registerServlet" name="/t_info_register.do"></bean> -->
+	<!-- <bean class="servlet.T_info_modifyServlet" name="/t_info_modify.do"></bean> -->
+	<!-- <bean class="servlet.T_member_listServlet" name="/t_member_list.do"></bean> -->
+	<!-- <bean class="servlet.T_team_recordServlet" name="/t_team_record.do"></bean> -->
+	<!-- <bean class="servlet.T_member_recordServlet" name="/t_member_record.do"></bean> -->
+	<!-- <bean class="servlet.T_community_freeServlet" name="/t_community_free.do"></bean> -->
+	<!-- <bean class="servlet.T_community_free_writeServlet" name="/t_community_free_write.do"></bean> -->
+	<!-- <bean class="servlet.T_community_free_detailServlet" name="/t_community_free_detail.do"></bean> -->
+	<!-- <bean class="servlet.T_community_free_modifyServlet" name="/t_community_free_modify.do"></bean> -->
+
+
+
+
+
+
+</beans>
+
